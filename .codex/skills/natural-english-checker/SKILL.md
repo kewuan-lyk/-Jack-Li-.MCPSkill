@@ -1,18 +1,19 @@
 ---
 name: natural-english-checker
-description: "Audit English for AI-sounding or overly academic vocabulary, passive voice, and formulaic transitions using natural undergraduate writing as the standard. Use when the user asks to check tone, identify an AI-written feel, or review text before submission. Read-only: report evidence without editing or rewriting the source."
+description: "Audit English for AI-sounding or overly academic vocabulary, passive voice, and formulaic transitions using natural undergraduate writing as the standard. Use when the user asks to check tone, identify an AI-written feel, or review text before submission. Strictly read-only: cite exact lines and suggest improvements without editing or rewriting the source."
 ---
 
 # Natural English Checker
 
 ## What to do
 
-Perform a read-only audit for inflated vocabulary, avoidable passive voice, formulaic AI transitions, and decorative phrases without concrete meaning. Compare against clear, direct writing by a real university student.
+Perform a read-only audit for inflated vocabulary, avoidable passive voice, formulaic AI transitions, and decorative phrases without concrete meaning. Compare against clear, direct writing by a real university student. List each supported finding and a concise revision suggestion, but never apply the suggestion to the input or its source file.
 
 ## Rules
 
 - **Evidence:** Every finding must cite the source filename, a specific line number, and an exact excerpt. If any evidence is missing or does not support the label, do not report it. Never judge from a general impression alone.
-- **Read-only:** Do not fix anything. Report only. Never modify, overwrite, patch, or rewrite any source file or source text, and do not provide replacement wording.
+- **Strictly read-only:** Report only. Never modify, overwrite, patch, replace, or rewrite any part of the input or source file. Suggestions may appear only as separate report text; never apply them, return a fully rewritten passage, or silently substitute edited text for the original.
+- **Actionable suggestions:** Give one concise suggestion for each supported finding. Keep the quoted original unchanged and clearly separate it from the suggestion.
 - **Baseline:** Use natural undergraduate assignment writing—not advertising, corporate copy, or academic-journal prose. Do not penalize simple vocabulary or a direct student voice.
 - **Context:** Do not flag a target word when it is precise and natural in context.
 
@@ -27,7 +28,7 @@ Perform a read-only audit for inflated vocabulary, avoidable passive voice, form
 Use visible source line numbers. For pasted text without a filename, use `pasted-text`; if it has no line breaks, number sentences from 1. Write one line per finding:
 
 ```text
-[AI-JARGON] File <filename>, Line <n>: "<exact original>" — <brief reason>
+[AI-JARGON] File <filename>, Line <n>: "<exact original>" -> Suggestion: <concise replacement or revision advice>
 ```
 
 Use only `[AI-JARGON]`, `[PASSIVE-VOICE]`, `[AI-TRANSITION]`, or `[UNNATURAL]`. Quote the smallest sufficient original phrase. End with exactly:
