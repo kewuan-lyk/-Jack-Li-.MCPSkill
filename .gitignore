@@ -1,0 +1,5 @@
+.DS_Store
+.venv/
+.venv-fastmcp/
+__pycache__/
+*.py[cod]
