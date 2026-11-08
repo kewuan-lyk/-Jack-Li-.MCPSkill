@@ -4,4 +4,5 @@ This repository contains a compact Python MCP server for inspecting a local proj
 
 The repository also includes reusable Codex skill definitions, including a read-only natural-English checker and an HW8 greeting test, with copies organized under `.codex/skills/` for local discovery. Supporting files document setup and demonstrations, while `.gitignore` keeps virtual environments, Python bytecode, caches, and macOS metadata out of version control.
 
-PS: This "Readme.md" is created to test the MCP, it's not the real readme!!!!
+
+# PS: This "Readme.md" is created to test the MCP, it's not the real readme!!!!

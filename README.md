@@ -1,7 +1,9 @@
+# PS: This is the actual readme, the rest one is for testing the Skills.
+
+
 # Reusable AI Toolkit
 
 My MCP Skill is a custom agent toolkit. This is a read-only natural English style checker skill and a FastMCP project context inspection server, built for managing homework assignments and project repositories.
-
 
 
 # Skill Motivation
